@@ -33,7 +33,7 @@ mainly due to:
 **Data Split:** Train/Test(folder-structured)
 **Image Size:** 224-288px(EffNet Native Transforms)
 
-> Dataset is downloaded programmatically during training and not stored directly in > the repository.
+> Dataset is downloaded programmatically during training and not stored directly in the repository.
 
 ## Data Pipeline 
 - Image resizing & normalization using EfficientNet weights
@@ -46,4 +46,48 @@ mainly due to:
 - **Epochs:** 10
 - **Device:** GPU (training), CPU (deployment)
 > Label smoothing was used to improve generalization and reduce over-confidence on visually similar disease classes.
+
+## Results 
+- The model learns strong visual patterns across multiple crops
+- Performs well on common disease classes
+- Occasional Confusion between visually similar diseases
+
+> The goal of the project is deployability rather than high-end accuracy.
+
+## Deployment 
+
+The trained model is deployed using **Gradio** and hosted on **Hugging Face Spaces.**
+
+**Features:**
+- Upload a leaf image
+- Recieve class probabilities for all 39 classes
+- CPU-only inference
+- Fast response time (~milliseconds per image)
+- The demo perfectly handles invalid inputs by predicting a dedicated non-leaf background class.
+  
+## Limitations
+- Performance depends on image quality and lighting
+- Confusion between visually similar diseases
+- Dataset Bias affect rare disease classes
+
+## Future Improvements 
+- Grad-CAM visual explanations
+- Fine-grained class balancing
+- Mobile-friendly deployment
+- Multimodal inputs (image + metadata)
+- Lightweight vision transformer comparison
+
+## Tech Stack 
+- Python
+- PyTorch
+- Torchvision
+- EfficientNet
+- Gradio
+- Hugging Face Spaces
+
+## 👨‍💻 Author
+**Roshan Mohammed**
+MSc Artificial Intelligence
+Focused on applied ML, computer vision, and deployable deep learning systems.
+
 
