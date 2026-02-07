@@ -2,7 +2,7 @@
 
 PlantNet39 is a deep learning based **Computer Vision system for plant leaf disease classification**, capable of identifying **39 different crop disease and healthy classes** from leaf images. The project focuses on **practical deployment** , balancing accuracy , model size , and inference efficiency. 
 
-👉 **Live demo (Hugging Face Spaces):** 
+👉 **Live demo (Hugging Face Spaces):** https://huggingface.co/spaces/roshan454/PlantNet39
 
 ## Problem Statment 
 
