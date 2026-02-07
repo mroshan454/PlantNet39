@@ -4,6 +4,8 @@ PlantNet39 is a deep learning based **Computer Vision system for plant leaf dise
 
 👉 **Live demo (Hugging Face Spaces):** https://huggingface.co/spaces/roshan454/PlantNet39
 
+![PlantNet39 Demo](PlantNet39_Demo.gif)
+
 ## Problem Statment 
 
 Plant disease significantly impact agricultural yield and food security.
