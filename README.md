@@ -22,23 +22,25 @@ This project explores whether a **lightweight deep learning model** can reliably
 
 EfficientNet-B2 was selected after evaluating CNN and ViT-based approaches, 
 mainly due to:
-- Lightweight (EfficientNet-B2 is **~35-36 MB** and ViT B-16 is around **~330-350 MB.** )
+- Lightweight (EfficientNet-B2 **~35-36 MB** cs ViT B-16 **~330-350 MB.** )
+- CPU-friendly deployment
 - Deployability on CPU-only environements
 - Performance almost near to ViT
 
 ## Dataset 
+**Base Dataset:** PlantVillage Dataset(subset)
 **Classes:** 39 
    - 38 plant leaf classes (disease + healthy)
    - 1 background/non-leaf class (`Background_without_leaves`) used to detect inputs that are not plant leaves
 **Data Split:** Train/Test(folder-structured)
 **Image Size:** 224-288px(EffNet Native Transforms)
 
-> Dataset is downloaded programmatically during training and not stored directly in the repository.
+> Dataset is downloaded programmatically during training and inference not stored directly in the repository.
 
 ## Data Pipeline 
 - Image resizing & normalization using EfficientNet weights
-- TrivialAugmentWide for data augmentation
-- Batched Dataloaders for efficient training
+- **TrivialAugmentWide** for data augmentation
+- Batched PyTorch Dataloaders for efficient training
 
 ## Training Details 
 - **Loss:** CrossEntropyLoss with label smoothing (0.1)
@@ -58,7 +60,7 @@ mainly due to:
 
 The trained model is deployed using **Gradio** and hosted on **Hugging Face Spaces.**
 
-**Features:**
+**Demo Features:**
 - Upload a leaf image
 - Recieve class probabilities for all 39 classes
 - CPU-only inference
