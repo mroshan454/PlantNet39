@@ -87,6 +87,7 @@ The trained model is deployed using **Gradio** and hosted on **Hugging Face Spac
 
 ## 👨‍💻 Author
 **Roshan Mohammed**
+
 MSc Artificial Intelligence
 Focused on applied ML, computer vision, and deployable deep learning systems.
 
